@@ -1,0 +1,23 @@
+{
+  "name": "quaro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "base.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "muse-ui": "^2.1.0",
+    "style-loader": "^0.19.0",
+    "vue": "^2.5.3",
+    "vue-loader": "^13.5.0",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.3",
+    "vuex": "^3.0.1",
+    "webpack": "^3.8.1",
+    "weui": "^1.1.2"
+  }
+}
