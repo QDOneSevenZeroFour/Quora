@@ -1,25 +1,26 @@
 <template>
+	<div>
 	<div id="zg-top-nav" class="zu-top-nav">
 		<ul class="zu-top-nav-ul zg-clear">
 
 			<li @click="isChange(arr[0])" :class="{'current':tip ==arr[0]}" class="zu-top-nav-li" id="zh-top-nav-home">
-				<a class="zu-top-nav-link" href="#/index" id="zh-top-link-home" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_home">首页</a>
+				<a class="zu-top-nav-link" href="#/show/index" id="zh-top-link-home" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_home">首页</a>
 			</li>
 
 			<li @click="isChange(arr[1])" :class="{'current':tip == arr[1]}" class="top-nav-topic-selector zu-top-nav-li " id="zh-top-nav-topic">
-				<a class="zu-top-nav-link" href="#/topic" id="top-nav-dd-topic">话题</a>
+				<a class="zu-top-nav-link" href="#/show/topic" id="top-nav-dd-topic">话题</a>
 			</li>
 
 			<li @click="isChange(arr[2])" :class="{'current':tip == arr[2]}" class="zu-top-nav-li " id="zh-top-nav-explore">
-				<a class="zu-top-nav-link" href="#/discover">发现</a>
+				<a class="zu-top-nav-link" href="#/show/discover">发现</a>
 			</li>
 
 			<li @click="isOpen()" class="top-nav-noti zu-top-nav-li ">
-				<a :class="{'open':bool}" class="zu-top-nav-link" href="#/message" id="zh-top-nav-count-wrap" role="button"><span class="mobi-arrow"></span>消息<span id="zh-top-nav-count" class="zu-top-nav-count zg-noti-number" style="display: none;">0</span></a>
+				<a :class="{'open':bool}" class="zu-top-nav-link" id="zh-top-nav-count-wrap" role="button"><span class="mobi-arrow"></span>消息<span id="zh-top-nav-count" class="zu-top-nav-count zg-noti-number" style="display: none;">0</span></a>
 			</li>
 
 			<li @click="showBol()" class="zu-top-nav-li">
-				<a id="js-top-nav-link-profile" class="zu-top-nav-link" href="#/self">
+				<a id="js-top-nav-link-profile" class="zu-top-nav-link">
 					我<span class="mobi-arrow"></span>
 				</a>
 				<span id="zh-top-nav-pm-count" class="zu-top-nav-pm-count zg-noti-number" style="visibility:hidden" data-count="0">
@@ -87,6 +88,8 @@
 			<button @click="isFalse()" class="slide-up"></button>
 		</div>
 	</div>
+	<router-view></router-view>
+</div>
 </template>
 
 <script>
